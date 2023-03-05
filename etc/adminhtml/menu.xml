@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <update id="Jajuma::top_level_extensions"
+                module="Jajuma_HyvaPwa"
+                resource="Jajuma_General::jajuma_extensions"
+                sortOrder="65"
+                title="JaJuMa"/>
+
+        <add id="Jajuma_HyvaPwa::jajuma_hyva_pwa"
+             title="Hyvä PWA"
+             module="Jajuma_HyvaPwa"
+             sortOrder="2200"
+             parent="Jajuma::top_level_extensions"
+             resource="Jajuma_HyvaPwa::config_hyvapwa"/>
+        <add id="Jajuma_HyvaPwa::jajuma_hyva_pwa_config"
+             title="Configuration"
+             module="Jajuma_HyvaPwa"
+             sortOrder="2210"
+             resource="Jajuma_HyvaPwa::config_hyvapwa"
+             action="admin/system_config/edit/section/hyvapwa"
+             parent="Jajuma_HyvaPwa::jajuma_hyva_pwa"/>
+
+        <update id="Jajuma::extensions"
+                module="Jajuma_HyvaPwa"
+                resource="Jajuma_General::jajuma_extensions"
+                sortOrder="10000"
+                parent="Jajuma::top_level_extensions"
+                title="JaJuMa Extensions"/>
+        <update id="Jajuma_Extensions::extensions_link"
+                title="More JaJuMa Extensions"
+                module="Jajuma_HyvaPwa"
+                sortOrder="10010"
+                action="hyvapwa/extensions"
+                parent="Jajuma::extensions"
+                resource="Jajuma_General::jajuma_extensions"/>
+    </menu>
+</config>

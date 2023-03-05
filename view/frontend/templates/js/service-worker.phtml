@@ -1,0 +1,33 @@
+<?php
+/**
+ * @author    JaJuMa GmbH <info@jajuma.de>
+ * @copyright Copyright (c) 2023 JaJuMa GmbH <https://www.jajuma.de>. All rights reserved.
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
+ */
+use Jajuma\HyvaPwa\Helper\Data;
+
+/** @var Data $helper * */
+$helper = $this->helper('Jajuma\HyvaPwa\Helper\Data');
+$enableServiceWorker = $helper->enableServiceWorker();
+?>
+
+<script>
+    <?php if($enableServiceWorker): ?>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/serviceWorker.js')
+                .then(function (registration) {
+
+                }).catch(function (err) {
+                console.error(`Registration failed with ${error}`);
+            });
+        }
+    <?php else: ?>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                for(let registration of registrations) {
+                    registration.unregister();
+                }
+            });
+        }
+    <?php endif; ?>
+</script>

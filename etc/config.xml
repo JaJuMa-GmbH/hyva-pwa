@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <hyvapwa>
+            <general>
+                <enable>0</enable>
+                <enable_manifest>0</enable_manifest>
+            </general>
+            <manifest>
+                <short_name>Hyva PWA</short_name>
+                <name>Jajuma Hyva PWA</name>
+                <description>A basic pwa extension for Hyva theme</description>
+                <theme_color>#ffffff</theme_color>
+                <background_color>#ffffff</background_color>
+                <display_type>standalone</display_type>
+                <orientation>any</orientation>
+                <icon>app-icon.jpg</icon>
+                <icon_sizes>192x192,256x256,512x512</icon_sizes>
+            </manifest>
+            <service_worker>
+                <enable>0</enable>
+            </service_worker>
+        </hyvapwa>
+    </default>
+</config>

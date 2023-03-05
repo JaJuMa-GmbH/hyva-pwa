@@ -1,0 +1,21 @@
+<?php
+/**
+ * @author    JaJuMa GmbH <info@jajuma.de>
+ * @copyright Copyright (c) 2023 JaJuMa GmbH <https://www.jajuma.de>. All rights reserved.
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
+ */
+use Jajuma\HyvaPwa\Helper\Data;
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block  */
+/** @var Escaper $escaper  */
+/** @var Data $helper * */
+$helper = $this->helper('Jajuma\HyvaPwa\Helper\Data');
+$themeColor = $helper->getManifestThemeColor();
+$manifestIcon = $block->getMediaUrl()."appIcon/" . $helper->getManifestIcon();
+?>
+
+<meta name="theme-color" content="<?=$escaper->escapeHtmlAttr($themeColor)?>">
+<link rel="manifest" href="/manifest.json" />
+<link rel="apple-touch-icon" href="<?=$escaper->escapeUrl($manifestIcon)?>">

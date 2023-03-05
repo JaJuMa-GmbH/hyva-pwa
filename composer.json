@@ -1,0 +1,23 @@
+{
+    "name": "jajuma/module-hyva-pwa",
+    "description": "JaJuMa Hyva PWA for Magento 2",
+        "type": "magento2-module",
+        "license": "MIT",
+        "version": "1.0.0",
+    "authors": [
+        {
+            "email": "info@jajuma.de",
+            "name": "JaJuMa"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Hyva\\PWA\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
