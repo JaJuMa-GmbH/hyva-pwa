@@ -63,9 +63,8 @@ class AppIcon extends Image
      */
     protected function getTmpFileName()
     {
-        $tmpName = null;
-        if (isset($_FILES['groups'])) {
-            $tmpName = $_FILES['groups']['tmp_name'][$this->getGroupId()]['fields'][$this->getField()]['value'];
+        if ($this->getFileData()) {
+            $tmpName = $this->getFileData();
         } else {
             $tmpName = is_array($this->getValue()) ? $this->getValue()['tmp_name'] : null;
         }
