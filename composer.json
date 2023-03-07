@@ -14,7 +14,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Hyva\\PWA\\": ""
+            "Jajuma\\HyvaPwa\\": ""
         },
         "files": [
             "registration.php"
