@@ -9,8 +9,8 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="admin_system_config_changed_section_hyvapwa">
-        <observer name="hyva_update_manifest_json_file_after_change_config"
-                  instance="Jajuma\HyvaPwa\Observer\UpdateManifest"/>
+        <observer name="hyva_update_manifest_json_service_worker_file_after_change_config"
+                  instance="Jajuma\HyvaPwa\Observer\UpdateManifestAndServiceWorker"/>
     </event>
     <event name="adminhtml_cache_flush_all">
         <observer name="hyva_update_service_worker_file_after_flush_cache"

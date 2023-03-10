@@ -20,10 +20,10 @@ use Magento\Framework\View\Asset\Repository;
 use const DIRECTORY_SEPARATOR;
 
 /**
- * Class UpdateManifest
+ * Class UpdateManifestAndServiceWorker
  * @package Jajuma\HyvaPwa\Observer
  */
-class UpdateManifest implements ObserverInterface
+class UpdateManifestAndServiceWorker implements ObserverInterface
 {
     /**
      * @var Data
@@ -112,6 +112,7 @@ class UpdateManifest implements ObserverInterface
 
             $manifestData = json_encode($manifestData);
             $this->updateManifest($manifestData);
+            $this->updateServiceWorker();
         }
     }
 
@@ -133,6 +134,32 @@ class UpdateManifest implements ObserverInterface
             $ioAdapter->write($fileName, $manifestData, 0777);
         } catch (Exception $exception) {
             $this->_pwaHelper->logger()->error($exception);
+        }
+    }
+
+    public function updateServiceWorker()
+    {
+        if (
+            $this->_pwaHelper->isEnabled() &&
+            $this->_pwaHelper->isModuleOutputEnabled('Jajuma_HyvaPwa')
+        ) {
+            $data =
+"self.addEventListener('install',  event => {});
+self.addEventListener('fetch', event => {});
+";
+            $ioAdapter = $this->file;
+            $rootPath = $this->directoryList->getPath(DirectoryList::PUB) . DIRECTORY_SEPARATOR;
+
+            try {
+                if ($ioAdapter->fileExists($rootPath . 'serviceWorker.js')) {
+                    $ioAdapter->rm($rootPath . 'serviceWorker.js');
+                }
+                $fileName = "serviceWorker.js";
+                $ioAdapter->open(array('path' => $rootPath));
+                $ioAdapter->write($fileName, $data, 0777);
+            } catch (Exception $exception) {
+                $this->_pwaHelper->logger()->error($exception);
+            }
         }
     }
 }
