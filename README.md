@@ -6,10 +6,23 @@ Hyvä PWA by [JaJuMa](https://www.jajuma.de/en) allows
 Magento 2 sites to pass the Lighthouse PWA check and submitting Magento stores to Google Play store.
 
 
-<img align="left" width="80" src="https://www.jajuma.de/sites/default/files/ckfinder/userfiles/images/jajuma-shop/magento-with-hyva/JaJuMa-Hyvanaut-small.png">  
+## Compatible with
 
-Compatible with  
-[Hyvä Theme](https://www.jajuma.de/en/jajuma-shop/online-shop-with-magento-2-and-hyva-themes)
+
+<td>
+    <table>
+     <tr>
+        <td><b>Hyvä Themes</b></td>
+        <td><b>Mage-OS</b></td>
+        <td><b>Magento</b></td>
+     </tr>
+     <tr>
+       <td><a href="https://www.jajuma.de/en/jajuma-shop/online-shop-with-magento-2-and-hyva-themes"><img align="left" width="80" src="https://www.jajuma.de/sites/default/files/ckfinder/userfiles/images/jajuma-shop/magento-with-hyva/JaJuMa-Hyvanaut-small.png"></img></a></td>
+       <td><a href="https://www.jajuma.de/en/jajuma-shop/demo-shop-with-mage-os-and-hyva-themes"><img align="left" width="80" src="https://www.jajuma.de/sites/default/files/ckfinder/userfiles/images/jajuma-develop/Mage-OS-Compatible.svg"></a></td>
+       <td><a href="https://www.jajuma.de/en/jajuma-shop"><img align="left" height="60" src="https://www.jajuma.de/sites/default/files/ckfinder/userfiles/images/jajuma-develop/magento-icon.svg"></a></td>
+    </tr>
+    </table>
+</td>
 
 ## Further Info, Extension Description & Manual
 
@@ -20,6 +33,7 @@ Compatible with
 
 * [Hyvä PWA Demo on Luma Theme](https://www.jajuma.de/en/jajuma-shop/demo-shop-with-magento-2)
 * [Hyvä PWA Demo on Hyvä Theme](https://www.jajuma.de/en/jajuma-shop/demo-shop-with-magento-2-and-hyva-themes)
+* [Hyvä PWA Demo on Mage-OS](https://www.jajuma.de/en/jajuma-shop/demo-shop-with-mage-os-and-hyva-themes)
 
 Sample/POC Magento PWA in Play Store:  
 <a href="https://play.google.com/store/apps/details?id=de.jajuma.extension.hyva.twa">
