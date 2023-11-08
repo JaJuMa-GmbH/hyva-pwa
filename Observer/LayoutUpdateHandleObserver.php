@@ -51,12 +51,12 @@ class LayoutUpdateHandleObserver implements ObserverInterface
         if ($this->_pwaHelper->isEnabled()){
             $layoutUpdate = $layout->getUpdate();
             if ($layoutUpdate->getHandles() && count($layoutUpdate->getHandles()) > 0) {
-                $layoutUpdate->addHandle('jajuma-pwa-header');
+                $layoutUpdate->addHandle('jajuma_pwa_header');
             }
         }
         if (!$this->_pwaHelper->isEnabledManifest()) {
             $layoutUpdate = $layout->getUpdate();
-            $layoutUpdate->addHandle('no-manifest');
+            $layoutUpdate->addHandle('no_manifest');
         }
     }
 }
