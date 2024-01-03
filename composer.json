@@ -3,7 +3,7 @@
     "description": "JaJuMa Hyva PWA for Magento 2",
         "type": "magento2-module",
         "license": "MIT",
-        "version": "1.0.4",
+        "version": "1.0.5",
     "authors": [
         {
             "email": "info@jajuma.de",
